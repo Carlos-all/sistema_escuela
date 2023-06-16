@@ -43,11 +43,17 @@ $query_tb = mysqli_query($con, $sql_tb);
             <h1>Ingresar datos</h1>
             <form action="insert.php" method="POST">
                 <input type="hidden" name="id" value="<?php echo $row['us_id'] ?>">
-                <input type="text" name="Nombre" placeholder="Nombre" pattern="[A-Za-z\s]+" title="Ingrese solo letras en el campo Nombre" required>
-                <input type="text" name="Apellidos" placeholder="Apellidos" pattern="[A-Za-z\s]+" title="Ingrese solo letras en el campo Apellidos" required>
-                <input type="text" name="Apoderado" placeholder="Apoderado" pattern="[A-Za-z\s]+" title="Ingrese solo letras en el campo Apoderado" required>
-                <input type="tel" name="Telefono" placeholder="Teléfono" pattern="\d{9}" title="Ingrese un número de teléfono válido de 9 dígitos" required>
-                <input type="date" name="Fechanac" placeholder="Fecha de nacimiento" required>
+
+                <div class="container">
+                    <div class="box">
+                    <input type="text" name="Nombre" placeholder="Nombre" pattern="[A-Za-z\s]+" title="Ingrese solo letras en el campo Nombre" required>
+                    <input type="text" name="Apellidos" placeholder="Apellidos" pattern="[A-Za-z\s]+" title="Ingrese solo letras en el campo Apellidos" required>
+                    <input type="text" name="Apoderado" placeholder="Apoderado" pattern="[A-Za-z\s]+" title="Ingrese solo letras en el campo Apoderado" required>
+                    <input type="tel" name="Telefono" placeholder="Teléfono" pattern="\d{9}" title="Ingrese un número de teléfono válido de 9 dígitos" required>
+                    <input type="date" name="Fechanac" placeholder="Fecha de nacimiento" required>
+                    </div>       
+                </div> 
+
                 <input type="submit" value="Registrar">
             </form>
         </div>

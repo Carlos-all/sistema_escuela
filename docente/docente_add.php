@@ -45,15 +45,22 @@ $query_tb = mysqli_query($con, $sql_tb);
             <form action="insert.php" method="POST" id="myForm">
                 <input type="hidden" name="id" value="<?php echo $row['us_id'] ?>">
 
-                <input type="text" name="nombres" placeholder="Nombres" pattern="[A-Za-z ]+" title="Ingrese solo letras y espacios" required>
-                <input type="text" name="apellidos" placeholder="Apellidos" pattern="[A-Za-z ]+" title="Ingrese solo letras y espacios" required>
-                <input type="text" name="dni" placeholder="DNI" pattern="[0-9]{8}" title="Ingrese un DNI válido de 8 dígitos" required>
-                <input type="text" name="fech_nac" placeholder="Fecha de nacimiento" pattern="\d{2}/\d{2}/\d{4}" title="Ingrese una fecha válida en formato dd/mm/yyyy" required>
-                <input type="text" name="domicilio" placeholder="Domicilio" required>
-                <input type="text" name="genero" placeholder="Género" pattern="[MF]" title="Ingrese 'M' para masculino o 'F' para femenino" required>
-                <input type="text" name="fech_contrat" placeholder="Fecha de contrato" pattern="\d{2}/\d{2}/\d{4}" title="Ingrese una fecha válida en formato dd/mm/yyyy" required>
-                <input type="text" name="fech_fin_contrat" placeholder="Fecha fin de contrato" pattern="\d{2}/\d{2}/\d{4}" title="Ingrese una fecha válida en formato dd/mm/yyyy" required>
-                <input type="text" name="especialidad" placeholder="Especialidad" required>
+
+                <div class="container">
+                    <div class="box">
+                        <input type="text" name="nombres" placeholder="Nombres" pattern="[A-Za-z ]+" title="Ingrese solo letras y espacios" required>
+                        <input type="text" name="apellidos" placeholder="Apellidos" pattern="[A-Za-z ]+" title="Ingrese solo letras y espacios" required>
+                        <input type="text" name="dni" placeholder="DNI" pattern="[0-9]{8}" title="Ingrese un DNI válido de 8 dígitos" required>
+                        <input type="text" name="fech_nac" placeholder="Fecha de nacimiento" pattern="\d{2}/\d{2}/\d{4}" title="Ingrese una fecha válida en formato dd/mm/yyyy" required>
+                        <input type="text" name="domicilio" placeholder="Domicilio" required>
+                        <input type="text" name="genero" placeholder="Género" pattern="[MF]" title="Ingrese 'M' para masculino o 'F' para femenino" required>
+                        <input type="text" name="fech_contrat" placeholder="Fecha de contrato" pattern="\d{2}/\d{2}/\d{4}" title="Ingrese una fecha válida en formato dd/mm/yyyy" required>
+                        <input type="text" name="fech_fin_contrat" placeholder="Fecha fin de contrato" pattern="\d{2}/\d{2}/\d{4}" title="Ingrese una fecha válida en formato dd/mm/yyyy" required>
+                        <input type="text" name="especialidad" placeholder="Especialidad" required>
+                    </div>       
+                </div> 
+
+                
 
                 <input type="submit" value="Registrar" class="btn btn-primary">
             </form>

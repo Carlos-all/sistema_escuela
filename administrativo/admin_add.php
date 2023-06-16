@@ -43,21 +43,23 @@ $query_tb = mysqli_query($con, $sql_tb);
             <h1>Ingresar datos</h1>
             <form action="insert.php" method="POST" id="myForm">
                 <input type="hidden" name="id" value="<?php echo $row['us_id'] ?>">
-
-                <input type="text" name="Nombre" placeholder="Nombre" pattern="[A-Za-z\s]+" title="Ingrese solo letras en el campo Nombre" required>
-                <input type="text" name="Telefono" placeholder="Teléfono" pattern="\d{9}" title="Ingrese un número de teléfono válido de 9 dígitos" required>
-                <input type="text" name="Usuario" placeholder="Usuario" required>
-                <input type="password" name="Contra" placeholder="Contraseña" required>
-                <input type="password" name="confirmarContra" placeholder="Confirmar contraseña" required>
-                <input type="text" name="Privilegio" placeholder="Privilegio" pattern="[0-1]" title="Ingrese Privilegio" required>
-                <span id="mensaje"></span>
+                
+                <div class="container">
+                    <div class="box">
+                        <input type="text" name="Nombre" placeholder="Nombre" pattern="[A-Za-z\s]+" title="Ingrese solo letras en el campo Nombre" required>
+                        <input type="text" name="Telefono" placeholder="Teléfono" pattern="\d{9}" title="Ingrese un número de teléfono válido de 9 dígitos" required>
+                        <input type="text" name="Usuario" placeholder="Usuario" required>
+                        <input type="password" name="Contra" placeholder="Contraseña" required>
+                        <input type="password" name="confirmarContra" placeholder="Confirmar contraseña" required>
+                        <input type="text" name="Privilegio" placeholder="Privilegio" pattern="[0-1]" title="Ingrese Privilegio" required>
+                    </div>
+                    
+                </div>   
 
                 <input type="submit" value="Registrar">
             </form>
         </div>
-        <div class="conteiner-btn">
-            
-        </div>
+        <div class="conteiner-btn"></div>
     </div>    
     
     <script>

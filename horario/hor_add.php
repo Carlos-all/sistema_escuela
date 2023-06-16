@@ -44,9 +44,13 @@ $query_tb = mysqli_query($con, $sql_tb);
             <form action="insert.php" method="POST">
                 <input type="hidden" name="id" value="<?php echo $row['us_id'] ?>">
 
-                <input type="text" name="Bloque" placeholder="Bloque" pattern="Bloque [1-9]" title="Ingrese 'Bloque' seguido de un número de un dígito" required>
-                <input type="time" name="inicio" placeholder="inicio" required>
-                <input type="time" name="fin" placeholder="fin" required>
+                <div class="container">
+                    <div class="box">
+                        <input type="text" name="Bloque" placeholder="Bloque" pattern="Bloque [1-9]" title="Ingrese 'Bloque' seguido de un número de un dígito" required>
+                        <input type="time" name="inicio" placeholder="inicio" required>
+                        <input type="time" name="fin" placeholder="fin" required>     
+                    </div>       
+                </div> 
                 
                 <input type="submit" value="Registrar">
             </form>

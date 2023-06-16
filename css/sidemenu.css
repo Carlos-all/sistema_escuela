@@ -32,6 +32,7 @@ body{
     top: 0;left: 0;
 }
 #main-container{
+    justify-content: center;
     width: 100%;
     height: 100%;
     display: flex;
@@ -277,3 +278,21 @@ table {
     width: 95px;
     height: 95px;
 }
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  
+  .box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px; /* Ajusta el espacio entre los elementos según tus necesidades */
+    max-width: 600px; /* Ajusta el ancho máximo del cuadro según tus necesidades */
+  }
+  
+  .box input {
+    width: 100%; /* Ajusta el ancho de los campos de entrada según tus necesidades */
+  }
