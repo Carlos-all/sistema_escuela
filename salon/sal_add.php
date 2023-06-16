@@ -44,13 +44,17 @@ $query_tb = mysqli_query($con, $sql_tb);
             <form action="insert.php" method="POST">
                 <input type="hidden" name="id" value="<?php echo $row['us_id'] ?>">
 
-                <input type="text" name="grado" placeholder="grado" pattern="[0-9]+" title="Ingrese un grado válido" required>
-                <input type="text" name="seccion" placeholder="seccion" pattern="[A-Za-z\s]+" title="Ingrese una sección válida" required>
-                <input type="text" name="capacidad" placeholder="capacidad" pattern="[0-9]+" title="Ingrese una capacidad válida" required>
-                <input type="text" name="docente" placeholder="docente" pattern="[A-Za-z\s]+" title="Ingrese un nombre de docente válido" required>
-                <input type="text" name="horario" placeholder="horario" pattern="[A-Za-z\s]+" title="Ingrese un horario válido" required>
-                <input type="text" name="curso" placeholder="Curso" pattern="[A-Za-z\s]+" title="Ingrese un nombre de curso válido" required>
-                
+                <div class="container">
+                    <div class="box">
+                        <input type="text" name="grado" placeholder="grado" pattern="[0-9]+" title="Ingrese un grado válido" required>
+                        <input type="text" name="seccion" placeholder="seccion" pattern="[A-Za-z\s]+" title="Ingrese una sección válida" required>
+                        <input type="text" name="capacidad" placeholder="capacidad" pattern="[0-9]+" title="Ingrese una capacidad válida" required>
+                        <input type="text" name="docente" placeholder="docente" pattern="[A-Za-z\s]+" title="Ingrese un nombre de docente válido" required>
+                        <input type="text" name="horario" placeholder="horario" pattern="[A-Za-z\s]+" title="Ingrese un horario válido" required>
+                        <input type="text" name="curso" placeholder="Curso" pattern="[A-Za-z\s]+" title="Ingrese un nombre de curso válido" required>
+                    </div>       
+                </div> 
+
                 <input type="submit" value="Registrar">
             </form>
         </div>
@@ -73,3 +77,4 @@ $query_tb = mysqli_query($con, $sql_tb);
 </body>
 
 </html>
+
