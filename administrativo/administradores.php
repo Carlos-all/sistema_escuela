@@ -69,10 +69,11 @@ $query_tb = mysqli_query($con, $sql_tb);
                             <th>
                                 <?php echo $row_tb['us_privilegio'] ?>
                             </th>
-                            <th><div class="btn-editar" onclick="window.location.href='./admin_update.php?us_id=<?php echo $row['us_id'] ?>&id_edit=<?php echo $row_tb['us_id'] ?>'">
-                            </div>
+                            <th>
+                                <div class="btn-editar" onclick="window.location.href='./admin_update.php?us_id=<?php echo $row['us_id'] ?>&id_edit=<?php echo $row_tb['us_id'] ?>'"></div>
                             </th>
-                            <th><div class="btn-eliminar" onclick="window.location.href='./admin_delete.php?us_id=<?php echo $row['us_id'] ?>&id_delete=<?php echo $row_tb['us_id'] ?>'"></div>
+                            <th>
+                                <div class="btn-eliminar" onclick="window.location.href='./admin_delete.php?us_id=<?php echo $row['us_id'] ?>&id_delete=<?php echo $row_tb['us_id'] ?>'"></div>
                             </th>
                         </tr>
                         <?php

@@ -48,18 +48,17 @@ $query_tb = mysqli_query($con, $sql_tb);
                 <input type="text" name="Telefono" placeholder="Teléfono" pattern="\d{9}" title="Ingrese un número de teléfono válido de 9 dígitos" required>
                 <input type="text" name="Usuario" placeholder="Usuario" required>
                 <input type="password" name="Contra" placeholder="Contraseña" required>
-                <input type="password" name="ConfirmarContra" placeholder="Confirmar contraseña" required>
-                <input type="text" name="Privilegio" placeholder="Privilegio" pattern="[A-Za-z]+" title="Ingrese solo letras en el campo Privilegio" required>
-                
+                <input type="password" name="confirmarContra" placeholder="Confirmar contraseña" required>
+                <input type="text" name="Privilegio" placeholder="Privilegio" pattern="[0-1]" title="Ingrese Privilegio" required>
+                <span id="mensaje"></span>
+
                 <input type="submit" value="Registrar">
             </form>
         </div>
         <div class="conteiner-btn">
             
         </div>
-    </div>
-
-    
+    </div>    
     
     <script>
         const btn = document.querySelector('#menu-btn');
@@ -77,13 +76,14 @@ $query_tb = mysqli_query($con, $sql_tb);
             var telefono = document.querySelector('input[name="Telefono"]').value;
             var usuario = document.querySelector('input[name="Usuario"]').value;
             var contra = document.querySelector('input[name="Contra"]').value;
-            var confirmarContra = document.querySelector('input[name="ConfirmarContra"]').value;
+            var confirmarContra = document.querySelector('input[name="confirmarContra"]').value;
             var privilegio = document.querySelector('input[name="Privilegio"]').value;
+            var mensaje = document.getElementById('mensaje');
 
             //REGEX
             var regexNombre = /^[A-Za-z\s]+$/;
             var regexTelefono = /^\d{9}$/;
-            var regexPrivilegio = /^[A-Za-z]+$/;
+            var regexPrivilegio = [0,1];
 
             //VALIDAR
             if (!regexNombre.test(nombre)) {
@@ -104,20 +104,8 @@ $query_tb = mysqli_query($con, $sql_tb);
                 return;
             }
 
-            if (contra.trim() === "") {
-                alert("Ingrese la contraseña");
-                event.preventDefault(); 
-                return;
-            }
-
-            if (confirmarContra !== contra) {
-                alert("Las contraseñas no coinciden");
-                event.preventDefault(); 
-                return;
-            }
-
             if (!regexPrivilegio.test(privilegio)) {
-                alert("Ingrese solo letras en el campo Privilegio");
+                alert("Ingrese 0 o 1");
                 event.preventDefault(); 
                 return;
             }
