@@ -78,3 +78,5 @@ $query_tb = mysqli_query($con, $sql_tb);
 
 </html>
 
+
+alarm ? (((int) getEvacuationTime())/60 + ":" + (((int) getEvacuationTime())%60 < 10 ? "0" : "") + ((int) (alarmEnding == 0 ? (time() - alarmBeginning)/second() : (alarmEnding - alarmBeginning)/second()))%60) : "00:00"

@@ -38,8 +38,8 @@ $query_tb = mysqli_query($con, $sql_tb);
     ?>
     <h1 class="title-modules">HORARIOS</h1>
     <div id="main-container">
-        <div class="col-md-8">
-            <table>
+        <div>
+            <table class="custom-table">
                 <thead>
                     <tr>
                         <th>BLOQUE</th>
