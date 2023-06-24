@@ -116,6 +116,6 @@ $query_tb = mysqli_query($con, $sql_tb);
 
         });
     </script>
-    <div class="capa"></div>
+
 </body>
 </html>

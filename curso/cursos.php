@@ -90,7 +90,7 @@ $query_tb = mysqli_query($con, $sql_tb);
             document.querySelector('body').classList.toggle('body-expanded');
         });
     </script>
-         <div class="capa"></div>
+     
 </body>
 
 </html>

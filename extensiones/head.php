@@ -99,7 +99,7 @@ $row = mysqli_fetch_array($query);
             document.querySelector('body').classList.toggle('body-expanded');
         });
     </script>
-    <div class="capa"></div>
+
 </body>
 
 </html>

@@ -21,7 +21,7 @@
         </h1>
     </div>
     <h1 class="title-modules">ADMINISTRADORES</h1><br>
-    <div class="capa"></div>
+
     <script>
         const btn = document.querySelector('#menu-btn');
         const menu = document.querySelector('#sidemenu');
