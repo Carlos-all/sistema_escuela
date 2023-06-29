@@ -38,28 +38,23 @@ $query_tb = mysqli_query($con, $sql_tb);
         include_once ($url);
     ?>
     <h1 class="title-modules">BIENVENIDO AL PANEL DE CONTROL</h1>
-    <div id="main-container">
-        <div class="conteiner-add">
-            <h1>Ingresar datos</h1>
+      
+    <div id="feedback-form">
+        <h2 class="header">Ingresar datos</h2>
+        <div>
             <form action="insert.php" method="POST">
                 <input type="hidden" name="id" value="<?php echo $row['us_id'] ?>">
 
-                <div class="container">
-                    <div class="box">
-                        <input type="text" name="grado" placeholder="grado" pattern="[0-9]+" title="Ingrese un grado válido" required>
-                        <input type="text" name="seccion" placeholder="seccion" pattern="[A-Za-z\s]+" title="Ingrese una sección válida" required>
-                        <input type="text" name="capacidad" placeholder="capacidad" pattern="[0-9]+" title="Ingrese una capacidad válida" required>
-                        <input type="text" name="docente" placeholder="docente" pattern="[A-Za-z\s]+" title="Ingrese un nombre de docente válido" required>
-                        <input type="text" name="horario" placeholder="horario" pattern="[A-Za-z\s]+" title="Ingrese un horario válido" required>
-                        <input type="text" name="curso" placeholder="Curso" pattern="[A-Za-z\s]+" title="Ingrese un nombre de curso válido" required>
-                    </div>       
-                </div> 
+                <input type="text" name="grado" placeholder="Grado" pattern="[0-9]+" title="Ingrese un grado válido" required>
+                    <input type="text" name="seccion" placeholder="Seccion" pattern="[A-Za-z\s]+" title="Ingrese una sección válida" required>
+                    <input type="text" name="capacidad" placeholder="Capacidad" pattern="[0-9]+" title="Ingrese una capacidad válida" required>
+                    <input type="text" name="docente" placeholder="Docente" pattern="[A-Za-z\s]+" title="Ingrese un nombre de docente válido" required>
+                    <input type="text" name="horario" placeholder="Horario" pattern="[A-Za-z\s]+" title="Ingrese un horario válido" required>
+                    <input type="text" name="curso" placeholder="Curso" pattern="[A-Za-z\s]+" title="Ingrese un nombre de curso válido" required>
 
-                <input type="submit" value="Registrar">
-            </form>
-        </div>
-        <div class="conteiner-btn">
-            
+                    <button type="submit" value="Registrar">Registrar</button>
+                </form>
+            </div>
         </div>
     </div>
     
@@ -79,4 +74,3 @@ $query_tb = mysqli_query($con, $sql_tb);
 </html>
 
 
-alarm ? (((int) getEvacuationTime())/60 + ":" + (((int) getEvacuationTime())%60 < 10 ? "0" : "") + ((int) (alarmEnding == 0 ? (time() - alarmBeginning)/second() : (alarmEnding - alarmBeginning)/second()))%60) : "00:00"
